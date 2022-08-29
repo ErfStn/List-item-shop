@@ -1,0 +1,46 @@
+.products {
+  border-radius: 8px;
+  box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.5);
+  padding: 20px 35px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 60rem;
+  margin: 20px;
+}
+.btn {
+  color: #7e22ce;
+  background-color: #fff;
+  padding: 10px 15px;
+  border: 1px solid #7e22ce;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+}
+.inc {
+  background-color: #f3e8ff;
+}
+.value {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  font-size: 16px;
+  color: #7e22ce;
+  background-color: #f3e8ff;
+  border-radius: 50%;
+}
+.remove {
+  color: red;
+  font-size: 16px;
+  padding: 8px 12px;
+  background-color: rgb(255, 214, 214);
+  border: 1px solid red;
+}
+.input{
+  padding: 8px;
+  border: 1px solid #7e22ce;
+  border-radius: 5px;
+}
