@@ -22,7 +22,7 @@ const ProductList = () => {
   };
   return (
     <div>
-      {!products.length ? <div>go to shopping</div> : <div>Hello</div>}
+      {!products.length && <div>go to shopping</div> }
 
       {renderProduct()}
     </div>

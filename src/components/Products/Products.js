@@ -27,7 +27,7 @@ const Product = ({product , decerement,incerement,onDelete,inputChange}) => { //
       <button className={styles.btn} onClick={onDelete}>
         Delete
       </button>
-      <input className={styles.input} onChange={inputChange} value={product.title}/>
+      {/* <input className={styles.input} onChange={inputChange} value={product.title}/> */}
     </div>
   );
 };

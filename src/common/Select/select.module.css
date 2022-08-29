@@ -1,0 +1,11 @@
+.selectContainer{
+    display: flex;
+    align-items: center;
+}
+.selectInput{
+    width: 200px;
+}
+.selectContainer span {
+    display: block;
+    margin-right: 1rem;
+}

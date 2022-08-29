@@ -1,4 +1,6 @@
 import React, { useContext, useReducer, useState } from "react";
+import { productsData } from "../../db/products";
+import _ from "lodash";
 
 const ProductContext = React.createContext(); // state
 const ProductContextDispatcher = React.createContext(); //setSetate
@@ -21,7 +23,7 @@ const reducer = (state, action) => {
       //avalio mirizim to dovomi
       updatedProducts[index] = product;
       //setState
-      return (updatedProducts);
+      return updatedProducts;
     }
     case "decrement": {
       const index = state.findIndex((item) => item.id === action.id);
@@ -48,12 +50,44 @@ const reducer = (state, action) => {
       updatedProducts[index] = product;
       return updatedProducts;
     }
+    case "search": {
+      const value = action.event.target.value;
+      if (value === "") {
+        return state;
+      } else {
+        const filteredProducts = state.filter((p) =>
+          p.title.toLocaleLowerCase().includes(value.toLocaleLowerCase())
+        );
+        return filteredProducts;
+      }
+    }
+    case "filter": {
+      const value = action.selectedOption.value;
+      if (value === "") {
+        return productsData;
+      } else {
+        const filteredProducts = productsData.filter(
+          (p) => p.availableSizes.indexOf(value) >= 0
+        );
+        return filteredProducts;
+      }
+    }
+    case "sort": {
+      const value = action.selectedOption.value;
+      const products = [...state];
+      if (value === "lowest") {
+        return _.orderBy(products, ["price"], ["asc"]);
+      } else {
+        return _.orderBy(products, ["price"], ["desc"]);
+      }
+    }
+
     default:
       return state;
   }
 };
 const ProductsProvider = ({ children }) => {
-  const [products, dispatch] = useReducer(reducer, initialState);
+  const [products, dispatch] = useReducer(reducer, productsData);
 
   return (
     <ProductContext.Provider value={products}>
