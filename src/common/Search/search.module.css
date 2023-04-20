@@ -1,19 +1,20 @@
-.formControl{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-margin: 20px 0 ;
+.formControl {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	margin: 1rem 0;
 }
-.formControl span{
-margin-right: 1rem;
+.formControl span {
+	margin-right: 1rem;
 }
-.formControl input{
-    outline: 0;
-    border: 1px solid #7e22ce;
-    padding: 6px 8px;
-    border-radius: 4px;
-    font-size: 16px;
+.formControl input {
+	outline: 0;
+	border: 1px solid #7e22ce;
+	padding: 6px 8px;
+	border-radius: 4px;
+	font-size: 16px;
 }
-.formControl input:focus{
-    border: 2px solid #7e22ce;
+.formControl input:focus {
+	border: 2px solid #7e22ce;
 }

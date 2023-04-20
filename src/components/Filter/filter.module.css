@@ -1,7 +1,17 @@
-.filter{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 60rem;
-
+.filter {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+}
+@media only screen and (max-width: 600px) {
+	.filter {
+		flex-direction: column;
+		height: 6rem;
+	}
+}
+section {
+	width: 100%;
+	max-width: 40rem;
+	margin-bottom: 1rem;
 }

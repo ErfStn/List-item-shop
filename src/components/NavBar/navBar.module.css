@@ -1,11 +1,10 @@
 .navBar {
 	width: 100%;
-	height: 60px;
+	height: 40px;
 	background-color: aliceblue;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	padding: 1rem;
 }
 .navBar h3 {
 	font-size: 18px;
